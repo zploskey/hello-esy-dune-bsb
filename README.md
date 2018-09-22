@@ -14,4 +14,4 @@ Then run `esy` in this directory to build the project.
 
 ```sh
 esy
-``
+```
