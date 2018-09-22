@@ -1,9 +1,10 @@
 {
   "name": "hello-esy-dune-bsb",
   "sources": {
-    "dir" : "src",
+    "dir" : "bin",
     "subdirs" : true
   },
+  "bsc-flags": ["-bs-g", "-g"],
   "package-specs": {
     "module": "commonjs",
     "in-source": true
