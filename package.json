@@ -2,9 +2,6 @@
   "name": "hello-esy-dune-bsb",
   "description": "Let's try to compile to javascript with Esy, Dune and BuckleScript",
   "version": "0.1.0",
-  "scripts": {
-    "build": "dune build -p #{self.name}"
-  },
   "keywords": [
     "BuckleScript",
     "Dune",
@@ -12,6 +9,9 @@
     "Esy"
   ],
   "license": "MIT",
+  "esy": {
+    "build": "dune build -p #{self.name}"
+  },
   "dependencies": {
     "@opam/dune": "*",
     "ocaml": "~4.6.0"
