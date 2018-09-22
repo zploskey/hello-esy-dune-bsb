@@ -1,0 +1,18 @@
+{
+  "name": "hello-esy-dune-bsb",
+  "sources": {
+    "dir" : "src",
+    "subdirs" : true
+  },
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "bs-dependencies": [
+  ],
+  "warnings": {
+    "error" : "+a"
+  },
+  "refmt": 3
+}
