@@ -23,7 +23,7 @@ Right now this build probably will not succeed as work is still underway to supp
 However, once the dependencies are installed we can build the project with BuckleScript.
 
 ```sh
-./node_modules/.bin/bsb -make-world -clean-world -verbose
+esy build:bsb
 ```
 
 This will produce some verbose build output,
