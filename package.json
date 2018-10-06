@@ -16,7 +16,7 @@
     "build:bsb": "./node_modules/.bin/bsb -clean-world -make-world -verbose"
   },
   "dependencies": {
-    "@opam/dune": "*",
+    "@opam/dune": "ocaml/dune#bucklescript",
     "bs-platform": "^4.0.5",
     "ocaml": "~4.2.3"
   }
