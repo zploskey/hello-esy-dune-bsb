@@ -5,6 +5,11 @@ Let's try to compile OCaml to JavasScript using
 [Dune](https://dune.build/)
 and [BuckleScript](https://bucklescript.github.io).
 
+*NOTE: This an experimental package to test building BuckleScript projects with Dune.*
+It won't work until Dune supports building with Bucklescript.
+You can follow along with progress in the [BuckleScript issue](https://github.com/ocaml/dune/issues/140) in the Dune repo,
+and the [bucklescript branch](https://github.com/ocaml/dune/tree/bucklescript) of Dune.
+
 ## Installation
 
 You will need to have `esy` command installed:
