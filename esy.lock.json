@@ -1,62 +1,65 @@
 {
-  "hash": "8bc1742b6d065079bd943d9ae02369b5",
-  "root": "hello-esy-dune-bsb@path:.",
+  "hash": "8188a8b4c6ff0d7a54fda2248d01f630",
+  "root": "root@path:./package.json",
   "node": {
-    "ocaml@4.2.3005": {
+    "root@path:./package.json": {
       "record": {
-        "name": "ocaml",
-        "version": "4.2.3005",
-        "source":
-          "archive:https://registry.npmjs.org/ocaml/-/ocaml-4.2.3005.tgz#sha1:6f718145cc874d09e631538708af5eecc3b77c50",
-        "files": [],
-        "opam": null
-      },
-      "dependencies": []
-    },
-    "hello-esy-dune-bsb@path:.": {
-      "record": {
-        "name": "hello-esy-dune-bsb",
-        "version": "path:.",
-        "source": "path:.",
+        "name": "root",
+        "version": "path:./package.json",
+        "source": "path:./package.json",
         "files": [],
         "opam": null
       },
       "dependencies": [
-        "@opam/dune@opam:1.2.1", "bs-platform@4.0.5", "ocaml@4.2.3005"
+        "@esy-ocaml/substs@0.0.1",
+        "@opam/dune@github:ocaml/dune#f72fea8e98cd2507b5fec3e54fae478382b41c73",
+        "bs-platform@4.0.6", "ocaml@4.2.3006"
       ]
     },
-    "bs-platform@4.0.5": {
+    "ocaml@4.2.3006": {
       "record": {
-        "name": "bs-platform",
-        "version": "4.0.5",
+        "name": "ocaml",
+        "version": "4.2.3006",
         "source":
-          "archive:https://registry.npmjs.org/bs-platform/-/bs-platform-4.0.5.tgz#sha1:d4fd9bbdd11765af5b75110a5655065ece05eed6",
+          "archive:https://registry.npmjs.org/ocaml/-/ocaml-4.2.3006.tgz#sha1:ecd4e034a3b9337383a3ace583b62a7c8fcf2879",
+        "files": [],
+        "opam": null
+      },
+      "dependencies": [ "flexdll-prebuilt@0.37.2" ]
+    },
+    "flexdll-prebuilt@0.37.2": {
+      "record": {
+        "name": "flexdll-prebuilt",
+        "version": "0.37.2",
+        "source":
+          "archive:https://registry.npmjs.org/flexdll-prebuilt/-/flexdll-prebuilt-0.37.2.tgz#sha1:9777bfa364ba0b58536043ccf5d8c8679d5214b8",
         "files": [],
         "opam": null
       },
       "dependencies": []
     },
-    "@opam/dune@opam:1.2.1": {
+    "bs-platform@4.0.6": {
+      "record": {
+        "name": "bs-platform",
+        "version": "4.0.6",
+        "source":
+          "archive:https://registry.npmjs.org/bs-platform/-/bs-platform-4.0.6.tgz#sha1:e7f156c77ad3efafb0c0291b41dcf1b06f93c192",
+        "files": [],
+        "opam": null
+      },
+      "dependencies": []
+    },
+    "@opam/dune@github:ocaml/dune#f72fea8e98cd2507b5fec3e54fae478382b41c73": {
       "record": {
         "name": "@opam/dune",
-        "version": "opam:1.2.1",
+        "version":
+          "github:ocaml/dune#f72fea8e98cd2507b5fec3e54fae478382b41c73",
         "source":
-          "archive:https://github.com/ocaml/dune/releases/download/1.2.1/dune-1.2.1.tbz#md5:f96bdf1a893a2178c2ad9c388439bd18",
+          "github:ocaml/dune#f72fea8e98cd2507b5fec3e54fae478382b41c73",
         "files": [],
-        "opam": {
-          "name": "dune",
-          "version": "1.2.1",
-          "opam":
-            "opam-version: \"2.0\"\nname: \"dune\"\nversion: \"1.2.1\"\nsynopsis: \"Fast, portable and opinionated build system\"\ndescription: \"\"\"\ndune is a build system that was designed to simplify the release of\nJane Street packages. It reads metadata from \"dune\" files following a\nvery simple s-expression syntax.\n\ndune is fast, it has very low-overhead and support parallel builds on\nall platforms. It has no system dependencies, all you need to build\ndune and packages using dune is OCaml. You don't need or make or bash\nas long as the packages themselves don't use bash explicitly.\n\ndune supports multi-package development by simply dropping multiple\nrepositories into the same directory.\n\nIt also supports multi-context builds, such as building against\nseveral opam roots/switches simultaneously. This helps maintaining\npackages across several versions of OCaml and gives cross-compilation\nfor free.\"\"\"\nmaintainer: \"opensource@janestreet.com\"\nauthors: \"Jane Street Group, LLC <opensource@janestreet.com>\"\nlicense: \"MIT\"\nhomepage: \"https://github.com/ocaml/dune\"\nbug-reports: \"https://github.com/ocaml/dune/issues\"\ndepends: [\n  \"ocaml\" {>= \"4.02.3\"}\n]\nconflicts: [\n  \"jbuilder\" {!= \"transition\"}\n]\nbuild: [\n  [\"ocaml\" \"configure.ml\" \"--libdir\" lib] {opam-version < \"2\"}\n  [\"ocaml\" \"bootstrap.ml\"]\n  [\"./boot.exe\" \"--release\" \"--subst\"] {pinned}\n  [\"./boot.exe\" \"--release\" \"-j\" jobs]\n]\ndev-repo: \"git+https://github.com/ocaml/dune.git\"\nurl {\n  src: \"https://github.com/ocaml/dune/releases/download/1.2.1/dune-1.2.1.tbz\"\n  checksum: \"md5=f96bdf1a893a2178c2ad9c388439bd18\"\n}",
-          "override": {
-            "build": [
-              [ "ocaml", "bootstrap.ml" ],
-              [ "./boot.exe", "--release", "-j", "4" ]
-            ]
-          }
-        }
+        "opam": null
       },
-      "dependencies": [ "@esy-ocaml/substs@0.0.1", "ocaml@4.2.3005" ]
+      "dependencies": []
     },
     "@esy-ocaml/substs@0.0.1": {
       "record": {
