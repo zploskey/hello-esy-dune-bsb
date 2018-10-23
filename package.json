@@ -1,21 +1,16 @@
 {
   "name": "hello-esy-dune-bsb",
-  "description": "Let's try to compile to javascript with Esy, Dune and BuckleScript",
+  "description":
+    "Let's try to compile to javascript with Esy, Dune and BuckleScript",
   "version": "0.1.0",
-  "keywords": [
-    "BuckleScript",
-    "Dune",
-    "OCaml",
-    "Esy"
-  ],
+  "keywords": [ "BuckleScript", "Dune", "OCaml", "Esy" ],
   "license": "MIT",
-  "esy": {
-    "build": "dune build -p #{self.name}"
-  },
+  "esy": { "build": "dune build -p #{self.name}" },
   "scripts": {
     "build:bsb": "./node_modules/.bin/bsb -clean-world -make-world -verbose"
   },
   "dependencies": {
+    "@esy-ocaml/substs": "^0.0.1",
     "@opam/dune": "ocaml/dune#bucklescript",
     "bs-platform": "^4.0.5",
     "ocaml": "~4.2.3"
